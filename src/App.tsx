@@ -58,9 +58,10 @@ function App() {
 
   return (
     <div>
-      <Modal children={
+      <Modal 
+      children={
         <TaskForm
-          btnText="Editar tarefa"
+          btnText="Editar"
           task={taskToUpdate}
           taskList={taskList}
           handleUpdate={udpateTask}
@@ -68,7 +69,7 @@ function App() {
       } />
       <Header />
       <main className={styles.main}>
-        <div>
+        <div className={styles.todo_form}>
           <h2>O que você vai fazer?</h2>
           <TaskForm
             btnText="Criar tarefa"
@@ -76,7 +77,7 @@ function App() {
             setTaskList={setTaskList}
           />
         </div>
-        <div>
+        <div className="todo-container">
           <h2>Suas tarefas:</h2>
           <TaskList
             taskList={taskList}
